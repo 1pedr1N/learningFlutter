@@ -17,17 +17,20 @@ class HomePageState extends State<HomePage> {
         title: Text('Pedro Dev <3'),
       ),
       body: Center(
-          child: GestureDetector(
-        child: Text(
-          'Contador $counter',
-          style: TextStyle(fontSize: 30),
+        child: Container(
+          height: 50,
+          width: 50,
+          color: Colors.black,
+          child: Align(
+            alignment: Alignment.center,
+            child: Container(
+              height: 20,
+              width: 20,
+              color: Colors.green,
+            ),
+          ),
         ),
-        onTap: () {
-          setState(() {
-            counter++;
-          });
-        },
-      )),
+      ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
