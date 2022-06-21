@@ -1,16 +1,5 @@
-# flutter_learning
+# Learning Flutter w/Flutterrando
 
-A new Flutter project.
+This is my project to learning how use flutter, in this project, you can return the commit and see my evolution, it's like my playground :)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
