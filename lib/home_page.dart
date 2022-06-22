@@ -14,22 +14,23 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [CustomSwitcher()],
-        backgroundColor:
-            AppController.instance.isDartTheme ? Colors.black26 : Colors.red,
-        title: Text('Pedro Dev <3'),
-      ),
-      body: Center(child: Text('Like a dark mode <3')),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          setState(() {
-            counter++;
-          });
-        },
-      ),
-    );
+        appBar: AppBar(
+          actions: [CustomSwitcher()],
+          backgroundColor:
+              AppController.instance.isDartTheme ? Colors.black26 : Colors.red,
+          title: Text('Pedro Dev <3'),
+        ),
+        body: Container(
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text('Contator $counter'),
+              CustomSwitcher(),
+            ],
+          ),
+        ));
   }
 }
 
