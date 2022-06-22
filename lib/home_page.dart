@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/app_controller.dart';
 
@@ -28,6 +30,22 @@ class HomePageState extends State<HomePage> {
             children: [
               Text('Contator $counter'),
               CustomSwitcher(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 50,
+                    height: 50,
+                    color: Colors.black87,
+                  ),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    color: Colors.black87,
+                  )
+                ],
+              )
             ],
           ),
         ));

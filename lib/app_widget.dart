@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/app_controller.dart';
-import 'home_page.dart';
+import 'login_page.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget();
@@ -18,7 +19,7 @@ class AppWidget extends StatelessWidget {
                   brightness: AppController.instance.isDartTheme
                       ? Brightness.dark
                       : Brightness.light),
-              home: HomePage());
+              home: LoginPage());
         });
   }
 }
