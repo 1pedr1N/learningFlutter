@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -24,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
             padding: EdgeInsets.all(8),
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Container(
+              SizedBox(
                 width: 200,
                 height: 200,
                 child: Image.network(
@@ -70,8 +69,6 @@ class _LoginPageState extends State<LoginPage> {
                     } else {
                       Text('Sai dae man');
                     }
-
-                    ;
                   },
                   child: Text('Join'))
             ]),
