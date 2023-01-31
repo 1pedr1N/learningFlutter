@@ -16,64 +16,44 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(
-            child: Column(
-          children: [
-            UserAccountsDrawerHeader(
-                currentAccountPicture: ClipRRect(
-                  borderRadius: BorderRadius.circular(40),
-                  child: Image.network(
-                      'https://i.ytimg.com/vi/ewxKgcqr4eA/mqdefault.jpg'),
-                ),
-                accountName: Text('Pedro'),
-                accountEmail: Text('pedro@gmail.com')),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Inicio'),
-              subtitle: Text('Tela de inicio'),
-              onTap: () {
-                print('Home');
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.exit_to_app),
-              title: Text('Logout'),
-              subtitle: Text('Finalizar sessão'),
-              onTap: () {
-                Navigator.of(context).pushReplacementNamed('/');
-              },
-            )
-          ],
-        )),
-        appBar: AppBar(
-          actions: [CustomSwitcher()],
-          backgroundColor:
-              AppController.instance.isDartTheme ? Colors.black26 : Colors.red,
-          title: Text('Pedro AAAAAA'),
-        ),
+        backgroundColor: Colors.orangeAccent,
         body: Container(
           width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text('Contator $counter'),
-              CustomSwitcher(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    width: 50,
-                    height: 50,
-                    color: Colors.black87,
-                  ),
-                  Container(
-                    width: 50,
-                    height: 50,
-                    color: Colors.black87,
-                  )
-                ],
+              Container(
+                height: 200,
+                width: 200,
+                child: Image.network(
+                    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/500px-LEGO_logo.svg.png'),
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 20.0),
+                child: Text('Loja da Lego',
+                    style: TextStyle(
+                      fontSize: 40,
+                      color: Colors.white,
+                    )),
+              ),
+              Text('A melhor Loja Do Mundo',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                  )),
+              Container(
+                margin: const EdgeInsets.only(top: 40.0),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      primary: Colors.redAccent,
+                      shadowColor: Colors.black,
+                      fixedSize: Size(300, 50)),
+                  child: Text('Entrar com Facebook'),
+                  onPressed: () {},
+                ),
               )
             ],
           ),

@@ -9,6 +9,13 @@ class AppWidget extends StatelessWidget {
   const AppWidget();
   @override
   Widget build(BuildContext context) {
+    const TextTheme(
+      headline4: TextStyle(
+        fontSize: 72.0,
+        color: Colors.red,
+        fontWeight: FontWeight.bold,
+      ),
+    );
     return AnimatedBuilder(
         animation: AppController.instance,
         builder: (BuildContext context, Widget? child) {

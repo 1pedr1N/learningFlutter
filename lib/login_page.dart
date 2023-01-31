@@ -64,11 +64,11 @@ class _LoginPageState extends State<LoginPage> {
                       shadowColor: Colors.black,
                       fixedSize: Size(300, 50)),
                   onPressed: () {
-                    if (email == 'master@mail.com' && password == 'master') {
-                      Navigator.of(context).pushReplacementNamed('/home');
-                    } else {
-                      Text('Sai dae man');
-                    }
+                    Navigator.of(context).pushReplacementNamed('/home');
+                    // if (email == 'master@mail.com' && password == 'master') {
+
+                    // } else {
+                    //   Text('Sai dae man');
                   },
                   child: Text('Join'))
             ]),
