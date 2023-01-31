@@ -16,11 +16,40 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: Drawer(
+            child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+                currentAccountPicture: ClipRRect(
+                  borderRadius: BorderRadius.circular(40),
+                  child: Image.network(
+                      'https://i.ytimg.com/vi/ewxKgcqr4eA/mqdefault.jpg'),
+                ),
+                accountName: Text('Pedro'),
+                accountEmail: Text('pedro@gmail.com')),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Inicio'),
+              subtitle: Text('Tela de inicio'),
+              onTap: () {
+                print('Home');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.exit_to_app),
+              title: Text('Logout'),
+              subtitle: Text('Finalizar sessão'),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed('/');
+              },
+            )
+          ],
+        )),
         appBar: AppBar(
           actions: [CustomSwitcher()],
           backgroundColor:
               AppController.instance.isDartTheme ? Colors.black26 : Colors.red,
-          title: Text('Pedro Dev <3'),
+          title: Text('Pedro AAAAAA'),
         ),
         body: Container(
           width: double.infinity,
